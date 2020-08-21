@@ -4,53 +4,6 @@
     height: 100vh;
 }
 
-.page-header {
-    background-color: var(--color-primary); 
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column; /*coloca o alinhamento do conteudo em coluna*/
-}
-
-.page-header .top-bar-container {
-    width: 90%;
-    margin: 0 auto; /*Cria uma margin dos dois lados do header*/ 
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /*Vai criar um espaçamento entre as imgens*/
-
-    padding: 1.6rem ;
-}
-
-.page-header .top-bar-container img {
-    /* mexendo nas duas imagens */
-    height: 2rem;
-}
-
-.page-header .top-bar-container a img{
-    /* imagem de "voltar" */
-    height: 3.2rem;
-    transition: opacity 0.2s; /*Definindo o tempo de transição*/ 
-}
-
-.page-header .top-bar-container a img:hover {
-    opacity: 0.6; /*Opacidade vai de zero a um */ 
-}
-
-/* Finalizando configuração do top-bar-container, iniciando header-content*/
-.page-header .header-content {
-    width: 90%;
-    margin: 3.2rem auto; 
-
-    position: relative; /*Configurando campo absoluto para o search, somente dentro do .header-content*/
-}
-
-.page-header .header-content strong {
-    font: 700 3.6rem Archivo;
-    line-height: 4.6rem;
-    color: var(--color-title-in-primary);
-}
-
 /* Mexendo no formulario */
 #search-teachers {
     margin-top: 3.2rem;
@@ -96,39 +49,6 @@
     background-color: var(--color-secondary-dark); 
 }
 
-.select-block label, .input-block label {
-    /*Pegando os dois formularios, input e select*/ 
-    font-size: 1.4rem;
-    color: var(--color-text-complement); 
-}
-
-.input-block input, .select-block select {
-    width: 100%;
-    height: 5.6rem;
-    margin-top: 0.8rem;
-    border-radius: 0.8rem;
-    border: 3px solid var(--color-line-in-white); 
-    background: var(--color-line-in-white);
-    outline: 0;
-    padding: 0 1.6rem;
-    font: 1.6rem Archivo; 
-}
-
-.input-block {
-    position: relative; /*Regula o campo para absoluto dentro do input-block*/
-}
-
-.input-block:focus-within::after {
-    content: "";
-    width: calc(100% - 8rem);
-    height: 2px;
-    background-color: rgba(71, 61, 139, 0.863);
-    
-    position: absolute; /*Deixa isso como campo golbal*/
-    left: 4rem;
-    right: 4rem;
-    bottom: 0; /*Deixa a linha em baixo*/
-}
 /*Iniciando parte do conteudo da pagina, que fica logo abaixo do header (main)*/
 #page-study main {
     margin: 3.2rem auto;
@@ -282,16 +202,6 @@
         margin-bottom: 0;
     }
 
-    .input-block:focus-within::after {
-        /*mantendo as configs anteriores, mas sobreescrevendo esssa*/
-        width: calc(100% - 4rem);
-        height: 2px;
-        background-color: var(--color-primary);
-        
-        left: 2rem;
-        right: 2rem;
-    }
-    
     .teacher-item > p { 
         /* > seleciona somente o primeiro nivel */
         margin: 0;
@@ -312,7 +222,6 @@
     .teacher-item footer button img {
         padding-right: 16px;
     }
-    
 }
 
 
